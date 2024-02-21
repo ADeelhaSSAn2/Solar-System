@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000;
+}
+
+.solar-system {
+    position: relative;
+}
+
+.sun {
+    width: 100px;
+    height: 100px;
+    background-color: #ff9900;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.earth-orbit {
+    width: 300px;
+    height: 300px;
+    border: 1px dashed #00aaff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotate-earth 10s linear infinite;
+}
+
+@keyframes rotate-earth {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.earth {
+    width: 40px;
+    height: 40px;
+    background-color: #00aaff;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.moon-orbit {
+    width: 100px;
+    height: 100px;
+    border: 1px dashed #cccccc;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotate-moon 2s linear infinite;
+}
+
+@keyframes rotate-moon {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.moon {
+    width: 20px;
+    height: 20px;
+    background-color: #cccccc;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
